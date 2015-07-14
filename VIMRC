@@ -1,0 +1,160 @@
+"----------------------------------------------------------------
+compatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'L9'
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Avoid a name conflict with L9
+Plugin 'user/L9', {'name': 'newL9'}
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+filetype indent plugin on
+syntax on
+"colorscheme mirodark 
+"SET's-----------------------------------------------------------
+set autoindent
+set backspace=indent,eol,start
+set cc=83
+set cmdheight=2
+set columns=84
+set confirm
+set encoding=utf-8
+set expandtab
+set smarttab
+set fileencoding=utf-8
+set foldenable
+set formatoptions+=t
+set gdefault
+set hidden
+set hlsearch
+set incsearch
+set ignorecase
+set laststatus=2
+set lazyredraw
+set list
+set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\ 
+set mouse=a
+set nocompatible
+set nostartofline
+set noswapfile
+set notimeout ttimeout ttimeoutlen=200
+set number
+set pastetoggle=<F2>
+set ruler
+set shiftwidth=4
+set showcmd
+set showmatch 
+set smartcase
+set softtabstop=4
+set t_vb=
+set textwidth=80
+set visualbell
+set winwidth=84
+set winheight=5
+set winminheight=5
+set winheight=999
+set wildmenu
+set pastetoggle=<F2>
+
+"----------------------------------------------------------------
+scriptencoding utf-8
+nmap <silent> ,/ :nohlsearch<CR>
+
+nmap <leader>md :%!/usr/local/bin/Markdown.pl --html4tags <cr>
+"----------------------------------------------------------------
+nnoremap j gj
+nnoremap k gk
+nnoremap B ^ 
+nnoremap E $
+nnoremap gV `[v`]
+nnoremap jk <esc>
+nnoremap <C-L> :nohl<CR><C-L>
+let mapleader="," "leader is comma
+let g:notes_directories = ['~/Google Drive',]
+"----------------------------------------------------------------
+"problematic whitespace
+"set autowriteall
+"set confirm
+"set cursorline
+"set listchars=tab:>.,trail:.,extends:\#,nbsp:. " Highlight
+"set nolist
+"set nomodeline
+"set shiftwidth=4
+"set tabstop=4
+" Display the cursor position on the last line of the screen or in the status
+" line of a window
+"----------------------------------------------------------------
+"----------------------------------------------------------------
+" Mappings {{{1
+" Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
+" which is the default
+map Y y$
+
+" Map <C-L> (redraw screen) to also turn off search highlighting until the
+" next search
+execute pathogen#infect()
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+
+"PLUGINS---------------------------------------------------------
+call vundle#rc()
+"Bundle 'junegunn/goyo.vim'
+"Bundle 'gmarik/vundle'
+"Bundle 'Lokaltog/vim-powerline'
+"Bundle 'zhaocai/linepower.vim'
+"Bundle 'Malabarba/smart-mode-line'
+"Bundle 'bling/vim-airline'
+"Bundle 'rhysd/open-pdf.vim'
+"Bundle 'mikewest/vimroom'
+"Bundle 'https://github.com/neilagabriel/vim-geeknote'
+"Bundle 'https://github.com/dhruvasagar/vim-table-mode.git'
+"Bundle 'gabrielelana/vim-markdown'
+"Bundle 'vimoutliner/vimoutliner'
+
+filetype plugin indent on
+filetype plugin on
+set rtp+={repository_root}/powerline/bindings/vim
+let g:GeeknoteFormat="markdown"
+imap jj <Esc>
+
+function! ShowColourSchemeName()
+    try
+                echo g:colors_name
+                    catch /^Vim:E121/
+                                echo "default
+                                    endtry
+                               endfunction

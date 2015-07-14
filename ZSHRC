@@ -1,0 +1,122 @@
+#USER CONFIGURATION----------------------------------------------#
+export ZSH=$HOME/.oh-my-zsh
+export PATH=$HOME/.node/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
+export PATH=$HOME/.cabal/bin:$PATH
+export PATH=/usr/local/Cellar:$PATH
+export PATH=$HOME/.vim/vimoutliner/vimoutliner/scripts:$PATH
+#-----------------------------------------------------------------#
+
+#THEME------------------------------------------------------------#
+ZSH_THEME="agnoster"
+#DEFAULT_USER='scottbaron'
+#----------------------------------------------------------------#
+
+#ALIAS-----------------------------------------------------------#
+alias cls="/usr/bin/clear"
+alias l="ls -ac |more"
+alias lt="ls -lt |more"
+alias ll="ls -FGlAhp |more"
+alias f="open -a Finder ./"
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias mkdir='mkdir -pv'  
+alias ~="cd ~"
+alias which="type -a"
+alias path="echo -e ${PATH//:/\\n}"
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+alias vv='vim .vimrc'
+alias zz='vim .zshrc'
+alias zs='source ~/.zshrc'
+#----------------------------------------------------------------#
+
+#ZSH SETTINGS----------------------------------------------------#
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
+# CASE_SENSITIVE="true"
+# DISABLE_AUTO_UPDATE="true"
+# export UPDATE_ZSH_DAYS=13
+# DISABLE_LS_COLORS="true"
+# DISABLE_AUTO_TITLE="true"
+# Uncomment the following line to enable command auto-correction.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# export LANG=en_US.UTF-8
+# ZSH_CUSTOM=/path/to/new-custom-folder
+#----------------------------------------------------------------#
+
+#PLUGINS---------------------------------------------------------#
+plugins=(git)
+plugins=(colored-man)
+. ~/z.sh #Maintains a jump list of directories.
+#----------------------------------------------------------------#
+HIST_STAMPS="yyyy-mm-dd"
+source $ZSH/oh-my-zsh.sh
+
+#LOCAL AND REMOTE SETTINGS---------------------------------------#
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+export EDITOR='vim'
+else
+export EDITOR='vim'
+fi
+if [[ -r /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+fi
+#source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+ bindkey -v
+ export KEYTIMEOUT=1
+#----------------------------------------------------------------#
+
+#COMPILATION FLAGS----------------------------------------------#
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+#Added by the Heroku Toolbelt
+#export PATH="/usr/local/heroku/bin:$PATH
+export PKG_CONFIG_PATH=/opt/pkgconfig/bin:
+#---------------------------------------------------------------#
+
+#CUSTOM EVERNOTE FUNCTION---------------------------------------#
+{
+if [ "$#" -ne 0 ] || [ "$1" = "-h" ] || [ "$1" = "-help" ]
+then
+echo "Usage: $0" >&2
+return 1
+fi
+# Fill these out with values you like.
+local tag_string="draft"
+local notebook="Sentinote"
+
+echo -n "What is the title of the post? "
+read title
+python /usr/local/bin/geeknote.py create \
+--title "${title}" \
+--tags "${tag_string}" \
+--notebook "${notebook}" \
+--content WRITE
+}
+bp()
+#-------------------Vim key mappings --------------------------
+# Map ESC to jj in insert mode
+inoremap jj <Esc>
+# Disable F1 help in normal mode 
+oremap <F1> <Esc>
+# F2 to disable higlight search
+noremap <F2> :set hlsearch!<CR>
+
