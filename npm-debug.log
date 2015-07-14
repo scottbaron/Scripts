@@ -1,0 +1,226 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'instal', '-g', 'autoprefixer' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'autoprefixer', null ]
+7 verbose cache add spec autoprefixer
+8 silly cache add parsed spec { raw: 'autoprefixer',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'autoprefixer',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: '*',
+8 silly cache add   type: 'range' }
+9 silly addNamed autoprefixer@*
+10 verbose addNamed "*" is a valid semver range for autoprefixer
+11 silly addNameRange { name: 'autoprefixer', range: '*', hasData: false }
+12 silly mapToRegistry name autoprefixer
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/autoprefixer
+16 verbose addNameRange registry:https://registry.npmjs.org/autoprefixer not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/autoprefixer
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 9:37:10 PM
+20 verbose request id 2c49989f1f113705
+21 verbose etag "BMMI9LXSD2XQJ1CNB3LTIK4TZ"
+22 http request GET https://registry.npmjs.org/autoprefixer
+23 http 304 https://registry.npmjs.org/autoprefixer
+24 silly get cb [ 304,
+24 silly get   { date: 'Tue, 14 Jul 2015 18:33:52 GMT',
+24 silly get     via: '1.1 varnish',
+24 silly get     'cache-control': 'max-age=60',
+24 silly get     etag: '"BMMI9LXSD2XQJ1CNB3LTIK4TZ"',
+24 silly get     age: '0',
+24 silly get     connection: 'keep-alive',
+24 silly get     'x-served-by': 'cache-ams4133-AMS',
+24 silly get     'x-cache': 'HIT',
+24 silly get     'x-cache-hits': '1',
+24 silly get     'x-timer': 'S1436898832.748058,VS0,VE96',
+24 silly get     vary: 'Accept' } ]
+25 verbose etag https://registry.npmjs.org/autoprefixer from cache
+26 verbose get saving autoprefixer to /Users/scottbaron/.npm/registry.npmjs.org/autoprefixer/.cache.json
+27 silly addNameRange number 2 { name: 'autoprefixer', range: '*', hasData: true }
+28 silly addNameRange versions [ 'autoprefixer',
+28 silly addNameRange   [ '0.1.20130409',
+28 silly addNameRange     '0.2.20130413',
+28 silly addNameRange     '0.3.20130423',
+28 silly addNameRange     '0.3.20130424',
+28 silly addNameRange     '0.3.20130427',
+28 silly addNameRange     '0.3.20130502',
+28 silly addNameRange     '0.4.20130507',
+28 silly addNameRange     '0.4.20130515',
+28 silly addNameRange     '0.4.20130521',
+28 silly addNameRange     '0.4.20130524',
+28 silly addNameRange     '0.4.20130528',
+28 silly addNameRange     '0.4.20130530',
+28 silly addNameRange     '0.4.20130603',
+28 silly addNameRange     '0.5.20130615',
+28 silly addNameRange     '0.5.20130616',
+28 silly addNameRange     '0.5.20130617',
+28 silly addNameRange     '0.5.20130625',
+28 silly addNameRange     '0.5.20130626',
+28 silly addNameRange     '0.5.20130629',
+28 silly addNameRange     '0.6.20130716',
+28 silly addNameRange     '0.6.20130721',
+28 silly addNameRange     '0.6.20130728',
+28 silly addNameRange     '0.6.20130729',
+28 silly addNameRange     '0.6.20130730',
+28 silly addNameRange     '0.6.20130731',
+28 silly addNameRange     '0.7.20130805',
+28 silly addNameRange     '0.7.20130806',
+28 silly addNameRange     '0.7.20130807',
+28 silly addNameRange     '0.7.20130808',
+28 silly addNameRange     '0.7.20130810',
+28 silly addNameRange     '0.7.20130824',
+28 silly addNameRange     '0.8.20130902',
+28 silly addNameRange     '0.8.20130903',
+28 silly addNameRange     '0.8.20130906',
+28 silly addNameRange     '0.8.20130911',
+28 silly addNameRange     '0.8.20130919',
+28 silly addNameRange     '0.8.20130923',
+28 silly addNameRange     '0.8.20131001',
+28 silly addNameRange     '0.8.20131006',
+28 silly addNameRange     '0.8.20131007',
+28 silly addNameRange     '0.8.20131009',
+28 silly addNameRange     '0.8.20131015',
+28 silly addNameRange     '0.8.20131017',
+28 silly addNameRange     '0.8.20131020',
+28 silly addNameRange     '0.8.20131029',
+28 silly addNameRange     '0.8.20131104',
+28 silly addNameRange     '0.8.20131209',
+28 silly addNameRange     '0.8.20131213',
+28 silly addNameRange     '1.0.20131222',
+28 silly addNameRange     '1.0.20140103',
+28 silly addNameRange     '1.0.20140109',
+28 silly addNameRange     '1.0.20140110',
+28 silly addNameRange     '1.0.20140117',
+28 silly addNameRange     '1.0.20140130',
+28 silly addNameRange     '1.0.20140203',
+28 silly addNameRange     '1.0.20140213',
+28 silly addNameRange     '1.1.20140218',
+28 silly addNameRange     '1.1.20140222',
+28 silly addNameRange     '1.1.20140226',
+28 silly addNameRange     '1.1.20140302',
+28 silly addNameRange     '1.1.20140319',
+28 silly addNameRange     '1.1.20140327',
+28 silly addNameRange     '1.1.20140403',
+28 silly addNameRange     '1.1.20140410',
+28 silly addNameRange     '1.1.20140429',
+28 silly addNameRange     '1.1.20140430',
+28 silly addNameRange     '1.1.20140510',
+28 silly addNameRange     '1.1.20140512',
+28 silly addNameRange     '1.1.20140521',
+28 silly addNameRange     '1.1.20140523',
+28 silly addNameRange     '1.1.20140605',
+28 silly addNameRange     '1.2.0',
+28 silly addNameRange     '1.3.0',
+28 silly addNameRange     '1.3.1',
+28 silly addNameRange     '2.0.0',
+28 silly addNameRange     '2.0.1',
+28 silly addNameRange     '2.0.2',
+28 silly addNameRange     '2.1.0',
+28 silly addNameRange     '2.1.1',
+28 silly addNameRange     '2.2.0',
+28 silly addNameRange     '3.0.0',
+28 silly addNameRange     '3.1.0',
+28 silly addNameRange     '4.0.0',
+28 silly addNameRange     '5.0.0',
+28 silly addNameRange     '5.1.0',
+28 silly addNameRange     '5.1.1',
+28 silly addNameRange     '5.2.0' ] ]
+29 silly addNamed autoprefixer@5.2.0
+30 verbose addNamed "5.2.0" is a plain semver version for autoprefixer
+31 silly cache afterAdd autoprefixer@5.2.0
+32 verbose afterAdd /Users/scottbaron/.npm/autoprefixer/5.2.0/package/package.json not in flight; writing
+33 verbose afterAdd /Users/scottbaron/.npm/autoprefixer/5.2.0/package/package.json written
+34 silly install resolved [ { name: 'autoprefixer',
+34 silly install resolved     version: '5.2.0',
+34 silly install resolved     description: 'Parse CSS and add vendor prefixes to CSS rules using values from the Can I Use website',
+34 silly install resolved     keywords: [ 'css', 'prefix', 'postprocessor', 'postcss' ],
+34 silly install resolved     author: { name: 'Andrey Sitnik', email: 'andrey@sitnik.ru' },
+34 silly install resolved     license: 'MIT',
+34 silly install resolved     repository:
+34 silly install resolved      { type: 'git',
+34 silly install resolved        url: 'git+https://github.com/postcss/autoprefixer.git' },
+34 silly install resolved     dependencies:
+34 silly install resolved      { 'autoprefixer-core': '~5.2.0',
+34 silly install resolved        'fs-extra': '~0.18.4',
+34 silly install resolved        postcss: '~4.1.11' },
+34 silly install resolved     devDependencies:
+34 silly install resolved      { 'gulp-json-editor': '2.2.1',
+34 silly install resolved        'gulp-replace': '0.5.3',
+34 silly install resolved        'gulp-eslint': '0.12.0',
+34 silly install resolved        'gulp-mocha': '2.1.0',
+34 silly install resolved        'gulp-babel': '5.1.0',
+34 silly install resolved        mocha: '2.2.5',
+34 silly install resolved        gulp: '3.8.11',
+34 silly install resolved        chai: '2.3.0',
+34 silly install resolved        'babel-core': '5.4.7' },
+34 silly install resolved     bin: { autoprefixer: 'autoprefixer' },
+34 silly install resolved     scripts: { test: 'gulp' },
+34 silly install resolved     bugs: { url: 'https://github.com/postcss/autoprefixer/issues' },
+34 silly install resolved     homepage: 'https://github.com/postcss/autoprefixer#readme',
+34 silly install resolved     _id: 'autoprefixer@5.2.0',
+34 silly install resolved     _shasum: '94ad5c1940c0ac2f93f365918ebcc36f8a065491',
+34 silly install resolved     _from: 'autoprefixer@*',
+34 silly install resolved     _npmVersion: '2.10.1',
+34 silly install resolved     _nodeVersion: '2.1.0',
+34 silly install resolved     _npmUser: { name: 'ai', email: 'andrey@sitnik.ru' },
+34 silly install resolved     maintainers: [ [Object], [Object] ],
+34 silly install resolved     dist:
+34 silly install resolved      { shasum: '94ad5c1940c0ac2f93f365918ebcc36f8a065491',
+34 silly install resolved        tarball: 'http://registry.npmjs.org/autoprefixer/-/autoprefixer-5.2.0.tgz' },
+34 silly install resolved     directories: {},
+34 silly install resolved     _resolved: 'https://registry.npmjs.org/autoprefixer/-/autoprefixer-5.2.0.tgz',
+34 silly install resolved     readme: 'ERROR: No README data found!' } ]
+35 info install autoprefixer@5.2.0 into /usr/local/lib
+36 info installOne autoprefixer@5.2.0
+37 verbose installOne of autoprefixer to /usr/local/lib not in flight; installing
+38 verbose lock using /Users/scottbaron/.npm/_locks/autoprefixer-692e6599c4d92c12.lock for /usr/local/lib/node_modules/autoprefixer
+39 silly install write writing autoprefixer 5.2.0 to /usr/local/lib/node_modules/autoprefixer
+40 verbose unbuild lib/node_modules/autoprefixer
+41 silly gentlyRm /usr/local/lib/node_modules/autoprefixer is being purged from base /usr/local
+42 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/autoprefixer
+43 verbose tar unpack /Users/scottbaron/.npm/autoprefixer/5.2.0/package.tgz
+44 verbose tar unpacking to /usr/local/lib/node_modules/autoprefixer
+45 silly gentlyRm /usr/local/lib/node_modules/autoprefixer is being purged
+46 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/autoprefixer
+47 silly gunzTarPerm modes [ '755', '644' ]
+48 error tar.unpack untar error /Users/scottbaron/.npm/autoprefixer/5.2.0/package.tgz
+49 verbose unlock done using /Users/scottbaron/.npm/_locks/autoprefixer-692e6599c4d92c12.lock for /usr/local/lib/node_modules/autoprefixer
+50 verbose fstream_path /usr/local/lib/node_modules/autoprefixer
+51 verbose fstream_type Directory
+52 verbose fstream_class DirWriter
+53 verbose stack Error: EACCES, mkdir '/usr/local/lib/node_modules/autoprefixer'
+53 verbose stack     at Error (native)
+54 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+54 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+54 verbose fstream_stack FSReqWrap.oncomplete (fs.js:95:15)
+55 verbose cwd /Users/scottbaron/Scripts
+56 error Darwin 14.4.0
+57 error argv "node" "/usr/local/bin/npm" "instal" "-g" "autoprefixer"
+58 error node v0.12.7
+59 error npm  v2.11.3
+60 error path /usr/local/lib/node_modules/autoprefixer
+61 error code EACCES
+62 error errno -13
+63 error Error: EACCES, mkdir '/usr/local/lib/node_modules/autoprefixer'
+63 error     at Error (native)
+63 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/autoprefixer']
+63 error   errno: -13,
+63 error   code: 'EACCES',
+63 error   path: '/usr/local/lib/node_modules/autoprefixer',
+63 error   fstream_type: 'Directory',
+63 error   fstream_path: '/usr/local/lib/node_modules/autoprefixer',
+63 error   fstream_class: 'DirWriter',
+63 error   fstream_stack:
+63 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+63 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+63 error      'FSReqWrap.oncomplete (fs.js:95:15)' ] }
+64 error Please try running this command again as root/Administrator.
+65 verbose exit [ -13, true ]
+66 verbose unbuild lib/node_modules/autoprefixer
+67 silly gentlyRm /usr/local/lib/node_modules/autoprefixer is being purged from base /usr/local
+68 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/autoprefixer
